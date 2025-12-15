@@ -6,8 +6,9 @@
   background: none;
 }
 
-.homepage {
+body[data-md-url="/"] .md-main {
   background-image: url("../assets/images/bg.png");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
