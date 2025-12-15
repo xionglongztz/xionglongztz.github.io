@@ -1,0 +1,6 @@
+site_name: 小狼的博客
+site_url: https://xionglongztz.github.io/
+nav:
+  - 首页: index.md
+theme:
+  name: mkdocs
