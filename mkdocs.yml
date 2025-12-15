@@ -1,8 +1,10 @@
-site_name: 小狼的博客
+site_name: 小狼的个人博客
 site_url: https://xionglongztz.github.io/
 nav:
   - 首页: index.md
 theme:
-  name: material
+  name: material # 主题为material
+  favicon: assets/favicon.jpg # 自定义favicon
   palette:
     scheme: slate
+    primary: custom # 自定义主题色
