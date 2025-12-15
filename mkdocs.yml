@@ -3,4 +3,6 @@ site_url: https://xionglongztz.github.io/
 nav:
   - 首页: index.md
 theme:
-  name: mkdocs
+  name: material
+  palette:
+    scheme: slate
