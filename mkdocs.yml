@@ -4,9 +4,9 @@ nav:
   - 首页: index.md
 theme:
   name: material # 主题为material
-  favicon: assets/favicon.jpg # 自定义favicon
+  favicon: assets/favicon.png # 自定义favicon
   palette:
     scheme: slate
     primary: custom # 自定义主题色
 extra_css:
-  - stylesheets/extra.css
+  - docs/stylesheets/extra.css
