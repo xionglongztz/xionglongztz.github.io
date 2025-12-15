@@ -6,7 +6,7 @@
   background: none;
 }
 
-body[data-md-url="/"] .md-main {
+body.md-page--index .md-main {
   background-image: url("../assets/images/bg.png");
   background-size: cover;
   background-position: center;
