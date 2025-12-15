@@ -2,3 +2,12 @@
   --md-primary-fg-color: #7CBDFF;
   --md-accent-fg-color: #7CBDFF;
 }
+.md-main__inner {
+  background: none;
+}
+
+.homepage {
+  background-image: url("../assets/images/bg.png");
+  background-size: cover;
+  background-position: center;
+}
