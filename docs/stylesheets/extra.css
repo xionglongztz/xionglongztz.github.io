@@ -6,9 +6,10 @@
   background: none;
 }
 
-body.md-container .md-main {
+body {
   background-image: url("../assets/images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
