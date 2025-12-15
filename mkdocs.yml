@@ -9,4 +9,4 @@ theme:
     scheme: slate
     primary: custom # 自定义主题色
 extra_css:
-  - docs/stylesheets/extra.css
+  - stylesheets/extra.css
