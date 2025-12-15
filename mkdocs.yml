@@ -4,6 +4,7 @@ nav:
   - 首页: index.md
 theme:
   name: material # 主题为material
+  custom_dir: docs/overrides
   favicon: assets/favicon.png # 自定义favicon
   palette:
     scheme: slate
