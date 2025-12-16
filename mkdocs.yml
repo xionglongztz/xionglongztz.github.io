@@ -1,7 +1,9 @@
-site_name: 小狼的个人博客
+site_name: 小狼的实验室
 site_url: https://xionglongztz.github.io/
 nav:
-  - 首页: index.md
+  - Homepage: index.md
+  - Thinking:
+    - 一些思考: thinking/关于DDRKirby(ISQ)的博客的思考.md
 theme:
   name: material # 主题为material
   custom_dir: docs/overrides
