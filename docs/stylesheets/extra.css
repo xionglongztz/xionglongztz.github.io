@@ -7,9 +7,21 @@
 }
 
 body {
+  position: relative;
+  margin: 0;
+}
+
+/* 背景层 */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
   background-image: url("../assets/images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+
+  filter: brightness(0.5); /* 亮度，0~1 变暗，>1 变亮 */
+  z-index: -1;
 }
