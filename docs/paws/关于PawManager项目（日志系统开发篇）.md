@@ -65,7 +65,7 @@ End Class
 ```
 这个就是我自己设计的日志记录的核心部分了，完整代码你可以在[PawLaboratory/Core](https://github.com/PawLaboratory/Core)看到，下图为这个日志库实际显示效果：
 
-![(Logger.vb实际显示效果)](..\assets\images\LoggerShow.png)
+![(Logger.vb实际显示效果)](../assets/images/LoggerShow.png)
 
 我这样设计不仅是为了方便我后续在使用基础设施的时候更方便更容易的输出颜色字符，同时也是考虑到其他插件开发者会尝试在日志输出东西用的，就像Minecraft服务器插件那样，为插件开发者提供更自由的方式。
 
