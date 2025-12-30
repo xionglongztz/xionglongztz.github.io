@@ -3,7 +3,9 @@ site_url: https://xionglongztz.github.io/
 nav:
   - Homepage: index.md
   - Thinking:
-    - 一些思考: thinking/关于DDRKirby(ISQ)的博客的思考.md
+    - 关于DDRKirby(ISQ)的博客的思考: thinking/关于DDRKirby(ISQ)的博客的思考.md
+  - Paws:
+    - 关于PawManager项目（日志系统开发篇）: paws/关于PawManager项目（日志系统开发篇）.md
 theme:
   name: material # 主题为material
   custom_dir: docs/overrides
