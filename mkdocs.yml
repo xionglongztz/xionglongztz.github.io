@@ -6,6 +6,8 @@ nav:
     - 关于DDRKirby(ISQ)的博客的思考: thinking/关于DDRKirby(ISQ)的博客的思考.md
   - Paws:
     - 关于PawManager项目（日志系统开发篇）: paws/关于PawManager项目（日志系统开发篇）.md
+  - AI:
+    - 关于AI的系统提示词的破解与思考: AI/关于AI的系统提示词的破解与思考.md
 theme:
   name: material # 主题为material
   custom_dir: docs/overrides
