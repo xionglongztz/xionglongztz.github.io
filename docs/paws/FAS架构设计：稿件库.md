@@ -56,7 +56,7 @@ End Enum
 在有了稿件之后，我们就可以定义一个新的类：**稿件列表**（稿件数据库），它的作用就是管理和抽象化那些对于稿件本身，以及元数据的操作的部分，比如我们可以这样定义：
 
 ```vbnet
-Public Class ArtworkLibrary
+Public Class ArtworkLibrary ' 定义稿件库实例类
     Public Function AddArtwork(artwork As Artwork) As Integer
         ' 添加新的稿件
     End Function
@@ -64,6 +64,7 @@ Public Class ArtworkLibrary
     Public Sub UpdateArtwork(artwork As Artwork)
         ' 更新稿件
     End Sub
+
     Public Function GetArtworkByUUID(uuid As Guid) As Artwork
         ' 根据UUID获得稿件
     End Function
@@ -76,7 +77,7 @@ End Class
 但很快我意识到另一个问题：假设我们的系统可以连接多个稿件库（比如有些画师或者设主具有多个设定，或者想把个人工作与共享作品分开），我们就得对`ArtworkLibrary`这个实例类进行管理，于是我这样设计：
 
 ```vbnet
-Public Class LibraryManager
+Public Class LibraryManager ' 定义稿件库管理器单实例类
     Private Shared _instance As LibraryManager
     Private _libraries As New Dictionary(Of String, ArtworkLibrary)
     Private _currentLibrary As ArtworkLibrary
