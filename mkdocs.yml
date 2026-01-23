@@ -4,8 +4,10 @@ nav:
   - Homepage: index.md
   - Thinking:
     - 关于DDRKirby(ISQ)的博客的思考: thinking/关于DDRKirby(ISQ)的博客的思考.md
+    - 对不同开源项目的思考：为爱发电真的值得吗: thinking/对不同开源项目的思考：为爱发电真的值得吗.md
   - Paws:
     - 关于PawManager项目（日志系统开发篇）: paws/关于PawManager项目（日志系统开发篇）.md
+    - 关于Paw系列暂停开发与新项目的启动: paws/关于Paw系列暂停开发与新项目的启动.md
   - AI:
     - 关于AI的系统提示词的破解与思考: AI/关于AI的系统提示词的破解与思考.md
 theme:
