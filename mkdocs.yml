@@ -8,6 +8,7 @@ nav:
   - Paws:
     - 关于PawManager项目（日志系统开发篇）: paws/关于PawManager项目（日志系统开发篇）.md
     - 关于Paw系列暂停开发与新项目的启动: paws/关于Paw系列暂停开发与新项目的启动.md
+    - FAS架构设计：稿件库: paws/FAS架构设计：稿件库.md
   - AI:
     - 关于AI的系统提示词的破解与思考: AI/关于AI的系统提示词的破解与思考.md
 theme:
