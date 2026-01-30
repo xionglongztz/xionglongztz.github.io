@@ -2,6 +2,8 @@ site_name: 小狼的实验室
 site_url: https://xionglongztz.github.io/
 nav:
   - Homepage: index.md
+  - DIY:
+    - 远古的回响：拆解分析老式微波炉计时器总成: DIY/远古的回响：拆解分析老式微波炉计时器总成.md
   - Thinking:
     - 关于DDRKirby(ISQ)的博客的思考: thinking/关于DDRKirby(ISQ)的博客的思考.md
     - 对不同开源项目的思考：为爱发电真的值得吗: thinking/对不同开源项目的思考：为爱发电真的值得吗.md
