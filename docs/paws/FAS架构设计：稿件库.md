@@ -1,6 +1,6 @@
 # FAS架构设计：稿件库
 
-*注：标题的FAS指本人即将开发的稿件管理器：Furry Art Studio的缩写*
+> *注：标题的FAS指本人即将开发的稿件管理器：Furry Art Studio的缩写，与FaaS或者其他相关的概念无任何关系。*
 
 对于一个稿件管理工具来说，我们先下个定义：稿件是什么？
 
@@ -28,16 +28,11 @@ Public Class Artwork ' 定义稿件属性
     Public Property CreateTime As DateTime   ' 稿件绘制时间
     Public Property ImportTime As DateTime   ' 稿件导入数据库时间
     Public Property UpdateTime As DateTime   ' 稿件更新元数据时间
-    Public Property Status As ArtworkStatus  ' 稿件状态
+    Public Property IsDeleted As Integer     ' 稿件状态(正常/已删除)
     Public Property Tags As String()         ' 稿件标签数组
     Public Property Notes As String          ' 稿件备注
     Public Property FileNames As String()    ' 稿件文件名数组
 End Class
-Public Enum ArtworkStatus As Integer ' 稿件状态枚举
-    Normal = 1      '正常
-    Archived = 2    '归档
-    Deleted = 3     '已删除
-End Enum
 ```
 这样，我们就可以成功地将稿件“数字化”了，这里的数字化指的是对稿件本身进行定义（图像集合），打标签（Tagging），建立索引（Index），最终目的是便于我们查询（Query）。
 
@@ -94,6 +89,7 @@ Public Class LibraryManager ' 定义稿件库管理器单实例类
     Private Sub New()
         '单例模式
     End Sub
+
     Public Sub AddLibrary(name As String)
         If Not _libraries.ContainsKey(name) Then
             Dim library As New ArtworkLibrary(name)
