@@ -1,0 +1,1318 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xionglongztz.github.io/paws/FAS%E5%A4%96%E8%A7%82%E8%AE%BE%E8%AE%A1%EF%BC%9A%E8%8F%9C%E5%8D%95%E7%B3%BB%E7%BB%9F/">
+      
+      
+        <link rel="prev" href="../FAS%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A8%BF%E4%BB%B6%E5%BA%93/">
+      
+      
+        <link rel="next" href="../../AI/%E5%85%B3%E4%BA%8EAI%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%9A%84%E7%A0%B4%E8%A7%A3%E4%B8%8E%E6%80%9D%E8%80%83/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
+    
+    
+      
+        <title>FAS外观设计：菜单系统 - 小狼的实验室</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <meta name="theme-color" content="#7CBDFF">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#fas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="小狼的实验室" class="md-header__button md-logo" aria-label="小狼的实验室" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            小狼的实验室
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              FAS外观设计：菜单系统
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="小狼的实验室" class="md-nav__button md-logo" aria-label="小狼的实验室" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    小狼的实验室
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homepage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DIY
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DIY
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIY/%E8%BF%9C%E5%8F%A4%E7%9A%84%E5%9B%9E%E5%93%8D%EF%BC%9A%E6%8B%86%E8%A7%A3%E5%88%86%E6%9E%90%E8%80%81%E5%BC%8F%E5%BE%AE%E6%B3%A2%E7%82%89%E8%AE%A1%E6%97%B6%E5%99%A8%E6%80%BB%E6%88%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    远古的回响：拆解分析老式微波炉计时器总成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thinking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Thinking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thinking/%E5%85%B3%E4%BA%8EDDRKirby%28ISQ%29%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%80%9D%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于DDRKirby(ISQ)的博客的思考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thinking/%E5%AF%B9%E4%B8%8D%E5%90%8C%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%80%9D%E8%80%83%EF%BC%9A%E4%B8%BA%E7%88%B1%E5%8F%91%E7%94%B5%E7%9C%9F%E7%9A%84%E5%80%BC%E5%BE%97%E5%90%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    对不同开源项目的思考：为爱发电真的值得吗
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Paws
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Paws
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAS%E5%88%9D%E4%BB%A3%E8%AE%BE%E8%AE%A1%EF%BC%9A%E5%9B%BE%E7%89%87%E5%A2%99/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS初代设计：图片墙
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B3%E4%BA%8EPawManager%E9%A1%B9%E7%9B%AE%EF%BC%88%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于PawManager项目（日志系统开发篇）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B3%E4%BA%8EPaw%E7%B3%BB%E5%88%97%E6%9A%82%E5%81%9C%E5%BC%80%E5%8F%91%E4%B8%8E%E6%96%B0%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%90%AF%E5%8A%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于Paw系列暂停开发与新项目的启动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAS%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A8%BF%E4%BB%B6%E5%BA%93/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS架构设计：稿件库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS外观设计：菜单系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/%E5%85%B3%E4%BA%8EAI%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%9A%84%E7%A0%B4%E8%A7%A3%E4%B8%8E%E6%80%9D%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于AI的系统提示词的破解与思考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="fas">FAS外观设计：菜单系统</h1>
+<p>本文我会介绍关于开源库的选用，菜单的图标选用，配色，以及部分WinAPI相关的内容，可能会有些难，请做好准备。</p>
+<p>在我看来，Windows的<strong>菜单系统</strong>一直都是UI/UX的重点。</p>
+<p>其实我本人更喜欢Win32 API去实现菜单，那种形式的菜单有一种系统原生的感觉，最主要支持<strong>深色模式</strong>，而使用VB.NET了，再去用太复杂的Win32 API有一种给了成品定制火砖，你却非要自己和水泥去制作一样。但后来我遇到的两个很重要的开源库，彻底改变了我这个程序的菜单开发。</p>
+<p>首先，.NET的菜单虽然不支持原生的深色模式，但是它支持修改前景色和背景色实现深色模式，但我注意到它似乎无法改变分割线的颜色，如果我想要去改变，那就需要重写和继承分割线，那样代码变得很复杂：</p>
+<p><img alt="dotNET菜单" src="../assets/net%E5%88%86%E5%89%B2%E7%BA%BF%E6%97%A0%E6%B3%95%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F.png" /></p>
+<p>于是我询问了万能的AI，有AI提供了一个好东西：<code>Krypton.Toolkit</code></p>
+<blockquote>
+<p><a href="https://github.com/Krypton-Suite/Standard-Toolkit">Krypton.Toolkit</a> 是一个专门用于 .NET 桌面应用程序开发的第三方用户界面（UI）组件库。</p>
+<p>简单来说，它是一套提供给 C# 或 VB.NET 程序员使用的“皮肤”和“控件集合”，目的是帮助开发者轻松创建出外观专业、现代且风格统一的 Windows 窗体应用程序。</p>
+</blockquote>
+<p><em>上述关于Krypton.Toolkit的介绍文本由AI生成。</em></p>
+<p>使用了<code>Krypton.Toolkit</code>后的程序变得相当漂亮，以下是实际效果：</p>
+<p><img alt="Krypton菜单深色模式效果" src="../assets/Krypton%E8%8F%9C%E5%8D%95%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F.png" /></p>
+<p><img alt="Krypton菜单浅色模式效果" src="../assets/Krypton%E8%8F%9C%E5%8D%95%E6%B5%85%E8%89%B2%E6%A8%A1%E5%BC%8F.png" /></p>
+<p>对应的实现代码如下：</p>
+<pre><code class="language-vbnet">Imports Krypton.Toolkit
+
+Public Class MainForm
+'在MainForm上放置一个KryptonManager, 并命名为KryptonMgrMain
+KryptonMgrMain.GlobalPaletteMode = PaletteMode.MaterialDark '深色主题
+KryptonMgrMain.GlobalPaletteMode = PaletteMode.MaterialLight '浅色主题
+End Class
+</code></pre>
+<p>这个工具的功能非常齐全，主题也有很多，尤其是对于深色模式来说，以及它对于菜单的无效，图标（后面会提到）等支持的同样很不错。</p>
+<p>2月12日我开始决定设计图标，但是在那期间我解决一些个人私事，还顺便玩了一阵子蔚蓝，以及过年，所以没有太多精力，直到前不久才刚刚设计完成（2月18日）。</p>
+<p>我首先找了我很久知道收藏的某个网站：<a href="https://icons8.com/icons">Icons8</a>，它虽然免费，但是不允许二次分发，这意味着我的软件如果嵌入了他们的资源可能会违反<a href="https://intercom.help/icons8-7fb7577e8170/en/articles/5534926-universal-multimedia-license-agreement-for-icons8">使用政策</a>。</p>
+<p>于是我想到我之前了解过的一个开源项目<a href="https://github.com/DearVa/Everywhere">Everywhere</a>，它使用的图标库是<a href="https://github.com/lucide-icons/lucide">Lucide</a>，这个许可证比较松，它允许我将图标修改后嵌入到程序中。</p>
+<p>由于图标是<code>SVG</code>格式，所以我让AI开发了一个转换脚本，将图标批量转换成<code>PNG</code>格式：</p>
+<pre><code class="language-python">#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+import glob
+from PIL import Image
+import io
+import subprocess
+import tempfile
+
+def delete_json_files():
+    &quot;&quot;&quot;删除当前文件夹下所有的JSON文件&quot;&quot;&quot;
+    json_files = glob.glob(&quot;*.json&quot;)
+
+    if not json_files:
+        print(&quot;未找到JSON文件&quot;)
+        return
+
+    for json_file in json_files:
+        try:
+            os.remove(json_file)
+            print(f&quot;已删除: {json_file}&quot;)
+        except Exception as e:
+            print(f&quot;删除 {json_file} 时出错: {e}&quot;)
+
+def convert_svg_to_png_with_inkscape():
+    &quot;&quot;&quot;
+    使用Inkscape命令行工具转换SVG（如果安装了Inkscape）
+    &quot;&quot;&quot;
+    svg_files = glob.glob(&quot;*.svg&quot;)
+
+    if not svg_files:
+        print(&quot;未找到SVG文件&quot;)
+        return False
+
+    # 检查Inkscape是否可用
+    try:
+        subprocess.run(['inkscape', '--version'], capture_output=True, check=True)
+        inkscape_available = True
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        inkscape_available = False
+
+    if not inkscape_available:
+        print(&quot;Inkscape未安装，尝试其他方法...&quot;)
+        return False
+
+    for svg_file in svg_files:
+        try:
+            png_file = svg_file.replace('.svg', '.png')
+
+            # 使用Inkscape命令行转换
+            cmd = [
+                'D:\\Program Files\\Inkscape\\bin\\inkscape',
+                svg_file,
+                '--export-type=png',
+                f'--export-filename={png_file}',
+                '--export-width=512',
+                '--export-height=512'
+            ]
+
+            subprocess.run(cmd, check=True)
+            print(f&quot;已转换: {svg_file} -&gt; {png_file} (512x512，使用Inkscape)&quot;)
+
+        except Exception as e:
+            print(f&quot;转换 {svg_file} 时出错: {e}&quot;)
+
+    return True
+
+def convert_svg_to_png_with_wand():
+    &quot;&quot;&quot;
+    使用Wand（ImageMagick绑定）转换SVG
+    需要安装ImageMagick
+    &quot;&quot;&quot;
+    try:
+        from wand.image import Image as WandImage
+        from wand.api import library
+    except ImportError:
+        print(&quot;请先安装Wand: pip install Wand&quot;)
+        return False
+
+    svg_files = glob.glob(&quot;*.svg&quot;)
+
+    if not svg_files:
+        return False
+
+    for svg_file in svg_files:
+        try:
+            png_file = svg_file.replace('.svg', '.png')
+
+            with WandImage(filename=svg_file) as img:
+                img.resize(512, 512)
+                img.save(filename=png_file)
+
+            print(f&quot;已转换: {svg_file} -&gt; {png_file} (512x512，使用ImageMagick)&quot;)
+
+        except Exception as e:
+            print(f&quot;转换 {svg_file} 时出错: {e}&quot;)
+
+    return True
+
+def convert_svg_to_png_with_reportlab():
+    &quot;&quot;&quot;
+    使用ReportLab转换SVG（纯Python方案）
+    &quot;&quot;&quot;
+    try:
+        from reportlab.graphics import renderPM
+        from svglib.svglib import svg2rlg
+    except ImportError:
+        print(&quot;请安装必要的库: pip install svglib reportlab&quot;)
+        return False
+
+    svg_files = glob.glob(&quot;*.svg&quot;)
+
+    if not svg_files:
+        return False
+
+    for svg_file in svg_files:
+        try:
+            png_file = svg_file.replace('.svg', '.png')
+
+            # 读取SVG
+            drawing = svg2rlg(svg_file)
+
+            # 缩放
+            scale = min(512 / drawing.width, 512 / drawing.height)
+            drawing.width = 512
+            drawing.height = 512
+            drawing.scale(scale, scale)
+
+            # 渲染为PNG
+            renderPM.drawToFile(drawing, png_file, fmt='PNG')
+
+            print(f&quot;已转换: {svg_file} -&gt; {png_file} (512x512，使用纯Python方案)&quot;)
+
+        except Exception as e:
+            print(f&quot;转换 {svg_file} 时出错: {e}&quot;)
+
+    return True
+
+def main():
+    &quot;&quot;&quot;主函数&quot;&quot;&quot;
+    print(&quot;开始处理文件...&quot;)
+    print(&quot;-&quot; * 40)
+
+    # 删除JSON文件
+    print(&quot;步骤1: 删除JSON文件&quot;)
+    delete_json_files()
+
+    print(&quot;\n&quot; + &quot;-&quot; * 40)
+
+    # 转换SVG文件
+    print(&quot;步骤2: 转换SVG文件为PNG&quot;)
+
+    # 尝试多种转换方法
+    if not convert_svg_to_png_with_inkscape():
+        print(&quot;尝试使用ImageMagick方案...&quot;)
+        if not convert_svg_to_png_with_wand():
+            print(&quot;尝试使用纯Python方案...&quot;)
+            if not convert_svg_to_png_with_reportlab():
+                print(&quot;所有转换方法都失败了&quot;)
+                print(&quot;\n请选择以下方案之一：&quot;)
+                print(&quot;1. 安装Inkscape: https://inkscape.org/release/&quot;)
+                print(&quot;2. 安装ImageMagick: https://imagemagick.org/script/download.php&quot;)
+                print(&quot;3. 解决cairosvg的依赖问题（安装GTK+）&quot;)
+
+    print(&quot;\n&quot; + &quot;-&quot; * 40)
+    print(&quot;处理完成!&quot;)
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>由于我的InkScape安装的目录问题，所以源程序存在部分改动。</p>
+<p>随后我为我的程序设计了一套主题色，我感觉<strong>海沫绿</strong>非常符合我的软件的特征：它看起来自由，很清新，最终选定<code>#57E2B4</code>作为图标的主要颜色。</p>
+<p>于是我使用Photoshop等工具，将图标由黑色又转换成对应的颜色。</p>
+<p>很快我便意识到了问题：这个颜色在<strong>深色模式</strong>下是合格的（因为我常年使用深色模式），但是浅色模式下这个颜色变得非常难以辨认，于是AI为我挑选了一个新的颜色：<code>#3AA28F</code>。</p>
+<p>于是我陷入了优化与体验的平衡：假设我只需要设置一套图标，那么就可以直接设置，最终图标会以二进制的方式存储在对应窗体设计器文件里，假设我想要让深色模式和浅色模式存在两套图标，那么就意味着我需要一个资源文件去管理它们，最终我选择了<strong>后者</strong>，比起优化我觉得体验更重要一些，尤其是我很喜欢我的配色在深色模式的菜单下近乎发光的效果。</p>
+<p>后来我为深色和浅色都设计了一套图标，分别以这两种颜色为主题。</p>
+<p>我让AI优化和编写了优雅的实现方式，尤其是对于菜单图标的处理。我最初设计的菜单图标是<code>512*512</code>的，但它们加载进图标会变得很大，于是就通过代码限制实际加载尺寸为32（在我的测试中，32已经是足够清晰的可以辨认的图标了，与512差不了太多）。</p>
+<p>菜单项设置的代码如下：</p>
+<pre><code class="language-vbnet">Private Sub InitializeMenuImages(Optional isDarkMode As Boolean = False)
+    Dim menuIcons As New List(Of (MenuItem As ToolStripMenuItem, BaseName As String)) From
+{
+    (MnuOnTop, &quot;MenuPin&quot;),
+    (MnuDevTools, &quot;MenuDevTools&quot;),
+    (MnuRunAsElevated, &quot;MenuShield&quot;),
+    (MnuRunTerminal, &quot;MenuTerminal&quot;),
+    (MnuProperties, &quot;MenuSettings&quot;),
+    (MnuExit, &quot;MenuClose&quot;),
+    (MnuLibList, &quot;MenuFolders&quot;),
+    (MnuLibRefresh, &quot;MenuRefresh&quot;),
+    (MnuLibNew, &quot;MenuFolderNew&quot;),
+    (MnuLibImport, &quot;MenuFolderInput&quot;),
+    (MnuLibExport, &quot;MenuFolderOutput&quot;),
+    (MnuLibExportCSV, &quot;MenuExportCsv&quot;),
+    (MnuLibClone, &quot;MenuClone&quot;),
+    (MnuLibOpenFolder, &quot;MenuFolderOpen&quot;),
+    (MnuLibCopy, &quot;MenuCopy&quot;),
+    (MnuLibClose, &quot;MenuFolderClose&quot;),
+    (MnuLibRename, &quot;MenuFolderEdit&quot;),
+    (MnuLibDelete, &quot;MenuFolderDel&quot;),
+    (MnuLibProperties, &quot;MenuProperties&quot;),
+    (MnuMsNew, &quot;MenuFileNew&quot;),
+    (MnuMsImport, &quot;MenuFileInput&quot;),
+    (MnuMsView, &quot;MenuView&quot;),
+    (MnuMsEdit, &quot;MenuEdit&quot;),
+    (MnuMsExport, &quot;MenuFileOutput&quot;),
+    (MnuMsPrint, &quot;MenuPrint&quot;),
+    (MnuMsDelete, &quot;MenuDelete&quot;),
+    (MnuMsOpenFolder, &quot;MenuFolderOpen&quot;),
+    (MnuMsCopy, &quot;MenuCopy&quot;),
+    (MnuViewPlay, &quot;MenuImagePlay&quot;),
+    (MnuSearch, &quot;MenuSearch&quot;),
+    (MnuPageUp, &quot;MenuPrevious&quot;),
+    (MnuPageDown, &quot;MenuNext&quot;),
+    (MnuHelpTutorial, &quot;MenuTutorial&quot;),
+    (MnuHelpGithub, &quot;MenuGithub&quot;),
+    (MnuHelpAbout, &quot;MenuInfo&quot;),
+    (MnuHelpWhatsNew, &quot;MenuStar&quot;)
+}
+    For Each setting In menuIcons
+        Dim resourceName = setting.BaseName &amp; If(isDarkMode, &quot;Dark&quot;, &quot;Light&quot;)
+        Using img As Image = DirectCast(My.Resources.Icons.ResourceManager.GetObject(resourceName), Image)
+            Dim size As Integer = 32 '图标尺寸
+            Using thumb As New Bitmap(size, size)
+                Using g = Graphics.FromImage(thumb)
+                    g.InterpolationMode = InterpolationMode.HighQualityBicubic
+                    g.SmoothingMode = SmoothingMode.HighQuality
+                    g.PixelOffsetMode = PixelOffsetMode.HighQuality
+                    g.CompositingQuality = CompositingQuality.HighQuality
+                    g.DrawImage(img, 0, 0, size, size)
+                End Using
+                setting.MenuItem.Image = thumb.Clone '使用高质量缩略图
+            End Using
+
+        End Using
+    Next
+End Sub
+</code></pre>
+<p>对应的资源文件如下：</p>
+<p><img alt="图标资源展示截图" src="../assets/%E5%9B%BE%E6%A0%87%E8%B5%84%E6%BA%90%E5%B1%95%E7%A4%BA%E6%88%AA%E5%9B%BE.png" /></p>
+<p>可以看到，深色模式的图标相比于浅色的<strong>亮度会更亮一些</strong>，同时右侧也展示了我的项目里图标，资源的存储路径和方式。</p>
+<p>对于<strong>危险的操作</strong>，我使用了<code>#E84141</code>这个颜色，它看起来在深色和浅色下都足够醒目。</p>
+<p>最终实现的菜单效果如下：</p>
+<p><img alt="浅色模式菜单" src="../assets/FAS%E8%8F%9C%E5%8D%95%E6%B5%85%E8%89%B2%E6%A8%A1%E5%BC%8F.png" />
+<img alt="深色模式菜单" src="../assets/FAS%E8%8F%9C%E5%8D%95%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F.png" /></p>
+<p>在软件自身的菜单设计完成后，我开始着手于程序窗口的<strong>右键菜单</strong>（系统菜单），因为很多专业的软件都会在这上面添加一些功能，典型的例子就是Google Chrome或Microsoft Edge，它们的标题栏右键会看到有很多新增的菜单，我的挑战就是在这里<strong>新增我自己的菜单项</strong>。</p>
+<p>这是一个非常挑战WinAPI理解的问题。首先我们先定义对应的函数：</p>
+<pre><code class="language-vbnet">#Region &quot;菜单&quot;
+    'GetSystemMenu 函数 - 获得系统菜单
+    &lt;DllImport(&quot;user32.dll&quot;)&gt;
+    Public Function GetSystemMenu(
+        ByVal hwnd As IntPtr,
+        ByVal bRevert As Boolean
+    ) As IntPtr
+    End Function
+    'AppendMenu 函数 - 添加菜单项
+    &lt;DllImport(&quot;user32.dll&quot;, CharSet:=CharSet.Auto)&gt;
+    Public Function AppendMenu(
+        ByVal hMenu As IntPtr,
+        ByVal wFlags As Integer,
+        ByVal wIDNewItem As Integer,
+        ByVal lpNewItem As String
+    ) As &lt;MarshalAs(UnmanagedType.Bool)&gt; Boolean
+    End Function
+    'RemoveMenu 函数 - 删除菜单项
+    &lt;DllImport(&quot;user32.dll&quot;)&gt;
+    Public Function RemoveMenu(
+        ByVal hMenu As IntPtr,
+        ByVal uPosition As Integer,
+        ByVal uFlags As Integer
+    ) As &lt;MarshalAs(UnmanagedType.Bool)&gt; Boolean
+    End Function
+    'CheckMenuItem 函数 - 选中/清除选中菜单项
+    &lt;DllImport(&quot;user32.dll&quot;)&gt;
+    Public Function CheckMenuItem(
+        ByVal hMenu As IntPtr,
+        ByVal uIDCheckItem As Integer,
+        ByVal uCheck As Integer
+    ) As Integer
+    End Function
+    'SetMenuItemBitmaps 函数 - 设置菜单位图
+    &lt;DllImport(&quot;user32.dll&quot;)&gt;
+    Public Function SetMenuItemBitmaps(
+        ByVal hMenu As IntPtr,
+        ByVal uPosition As Integer,
+        ByVal uFlags As Integer,
+        ByVal hBitmapUnchecked As IntPtr,
+        ByVal hBitmapChecked As IntPtr
+    ) As &lt;MarshalAs(UnmanagedType.Bool)&gt; Boolean
+    End Function
+    'EnableMenuItem 函数 - 使菜单在有效与无效之间切换
+    &lt;DllImport(&quot;user32.dll&quot;)&gt;
+    Public Function EnableMenuItem(
+        ByVal hMenu As IntPtr,
+        ByVal uIDEnableItem As Integer,
+        ByVal uEnable As Integer
+    ) As Integer
+    End Function
+    'GetMenuItemCount 函数 - 获取菜单项数量
+    &lt;DllImport(&quot;user32.dll&quot;)&gt;
+    Public Function GetMenuItemCount(
+        ByVal hMenu As IntPtr
+    ) As Integer
+    End Function
+    'InsertMenu 函数 - 插入菜单项
+    &lt;DllImport(&quot;user32.dll&quot;, CharSet:=CharSet.Auto)&gt;
+    Public Function InsertMenu(
+        ByVal hMenu As IntPtr,
+        ByVal nPosition As Integer,
+        ByVal wFlags As Integer,
+        ByVal wIDNewItem As Integer,
+        &lt;MarshalAs(UnmanagedType.LPTStr)&gt; ByVal lpNewItem As String
+    ) As &lt;MarshalAs(UnmanagedType.Bool)&gt; Boolean
+    End Function
+    'TrackPopupMenu 函数 - 弹出菜单
+    &lt;DllImport(&quot;user32.dll&quot;)&gt;
+    Public Function TrackPopupMenu(hMenu As IntPtr, uFlags As Integer, x As Integer, y As Integer, nReserved As Integer, hWnd As IntPtr, prcRect As IntPtr) As Integer
+    End Function
+    'GetMenuItemID 函数 - 获取菜单项ID
+    &lt;DllImport(&quot;user32.dll&quot;)&gt;
+    Public Function GetMenuItemID(
+        ByVal hMenu As IntPtr,
+        ByVal nPos As Integer
+    ) As Integer
+    End Function
+    'SetMenuItemInfo 函数 - 设置菜单项信息
+    &lt;DllImport(&quot;user32.dll&quot;)&gt;
+    Public Function SetMenuItemInfo(hMenu As IntPtr, un As Integer, fByPosition As Boolean, &lt;MarshalAs(UnmanagedType.Struct, SizeConst:=80)&gt; ByRef lpmii As MENUITEMINFO) As Boolean
+    End Function
+    'GetMenuItemInfo 函数 - 获取菜单项信息
+    &lt;DllImport(&quot;user32.dll&quot;, CharSet:=CharSet.Auto)&gt;
+    Public Function GetMenuItemInfo(hMenu As IntPtr, uItem As Integer, fByPosition As Boolean, ByRef lpmii As MENUITEMINFO) As Boolean
+    End Function
+    'DeleteObject 函数 - 释放资源
+    &lt;DllImport(&quot;gdi32.dll&quot;)&gt;
+    Public Function DeleteObject(hObject As IntPtr) As Boolean
+    End Function
+    'MENUITEMINFO 结构体
+    &lt;StructLayout(LayoutKind.Sequential)&gt;
+    Public Structure MENUITEMINFO
+        Public cbSize As Integer
+        Public fMask As Integer
+        Public fType As Integer
+        Public fState As Integer
+        Public wID As Integer
+        Public hSubMenu As IntPtr
+        Public hbmpChecked As IntPtr
+        Public hbmpUnchecked As IntPtr
+        Public dwItemData As IntPtr
+        Public dwTypeData As String
+        Public cch As Integer
+        Public hbmpItem As IntPtr
+    End Structure
+    Public Const MIIM_BITMAP As Integer = &amp;H80
+    Public Const MIIM_TYPE As Integer = &amp;H10
+    Public Const MIIM_FTYPE As Integer = &amp;H100
+    Public Const MIIM_STRING As Integer = &amp;H40
+    Public Const MIIM_ID As Integer = &amp;H2
+    Public Const MFT_STRING As Integer = &amp;H0
+    '菜单常量
+    Public Const MF_SEPARATOR = &amp;H800 '分隔符
+    Public Const MF_STRING = &amp;H0 '字符串
+    Public Const MF_BITMAP = &amp;H4 '位图
+    Public Const MF_GRAYED = &amp;H1 '灰色菜单
+    Public Const MF_ENABLED = &amp;H0 '菜单可用
+    Public Const MF_CHECKED = &amp;H8 '勾选
+    Public Const MF_UNCHECKED = &amp;H0 '取消勾选
+    Public Const MF_HILITE = &amp;H80 '高亮
+    Public Const MF_BYCOMMAND = &amp;H0 '标识符
+    Public Const MF_BYPOSITION = &amp;H400 '位置
+    '菜单项常量
+    Public Const SC_RESTORE = &amp;HF120 '还原
+    Public Const SC_MOVE = &amp;HF010 '移动
+    Public Const SC_SIZE = &amp;HF000 '大小
+    Public Const SC_MINIMIZE = &amp;HF020 '最小化
+    Public Const SC_MAXIMIZE = &amp;HF030 '最大化
+    Public Const SC_CLOSE = &amp;HF060 '关闭
+    '菜单显示标识
+    Public Const TPM_LEFTALIGN As Integer = &amp;H0
+    Public Const TPM_RETURNCMD As Integer = &amp;H100
+
+#End Region
+</code></pre>
+<p>我们<strong>不一定</strong>用到里面全部的API，但不少API是后续我们会使用的，这里补充两个关键细节：</p>
+<ol>
+<li><code>AppendMenu</code>函数只能在菜单的末尾<strong>追加菜单</strong>，不能在任意菜单项里插入新的菜单。更现代的实现方式是<code>InsertMenu</code>函数。</li>
+<li><code>SetMenuItemBitmaps</code>也是一个过时的API，现代的实现方式是<code>SetMenuItemInfo</code>，这个函数需要使用结构体，相对复杂一些。</li>
+</ol>
+<p>我们通过这个方式，获得当前窗口的系统菜单句柄（这是对菜单操作的基础），随后我们在它的上面插入一个叫做<code>窗口置顶(&amp;T)</code>的菜单项：</p>
+<pre><code class="language-vbnet">Private Const SC_ALWAYSONTOP = 1 '置顶菜单项标识符
+Dim menuHandle = GetSystemMenu(Handle, False) '获取菜单句柄
+InsertMenu(menuHandle, 0, MF_BYPOSITION Or MF_STRING, SC_ALWAYSONTOP, &quot;窗口置顶(&amp;T)&quot;)
+</code></pre>
+<p>在上面的代码中：
+ - <code>Handle</code>是当前窗口的句柄，这里其实是一个语法糖，也就是<strong>当前窗口的代码</strong>里我们可以直接用<code>Handle</code>代替<code>Me.Handle</code>的写法
+ - <code>menuHandle</code>是我们获得的菜单句柄，在第二条语句里我们在这上面进行操作
+ - <code>0</code>意味着我们在菜单的最上面（实际是在<code>还原(&amp;R)</code>菜单的<strong>上方</strong>）插入一条菜单
+ - <code>MF_BYPOSITION Or MF_STRING</code>是固定标识符，表示我们插入的是一个字符串，如果是分割线，应该写作<code>MF_BYPOSITION Or MF_SEPARATOR</code>
+ - <code>SC_ALWAYSONTOP</code>就是我们新定义的菜单的标识符，这里标识符不应该和系统菜单自带的（例如<code>SC_RESTORE</code>）冲突，<strong>这个标识符很重要，不仅是为了方便维护，后面我们仍然需要借助这个常量</strong>。</p>
+<p>于是，我们成功在菜单上添加了一个窗口置顶的菜单项，但是它现在点是没有任何效果的，因为我们的程序还不知道它的事件，这时候需要我们添加如下代码：</p>
+<pre><code class="language-vbnet">Protected Overrides Sub WndProc(ByRef m As Message) '窗体消息处理函数
+    If m.Msg = WM_SYSCOMMAND Then '窗体响应菜单
+        Dim hMenu = GetSystemMenu(Handle, False)
+        Select Case m.WParam.ToInt32'对应菜单标号
+            Case SC_ALWAYSONTOP '窗口置顶
+                If TopMost = False Then
+                    TopMost = True
+                    CheckMenuItem(hMenu, SC_ALWAYSONTOP, MF_CHECKED) '窗口置顶
+                Else
+                    TopMost = False
+                    CheckMenuItem(hMenu, SC_ALWAYSONTOP, MF_UNCHECKED) '取消置顶
+                End If
+        End Select
+    End If
+    MyBase.WndProc(m) '循环监听消息
+End Sub
+</code></pre>
+<p>我们这里通过监听窗口的<strong>系统命令</strong>（<code>WM_SYSCOMMAND</code>）消息，从而得知用户激活了菜单，并且我们将我们的菜单标识符传入，就可以监听用户点击菜单的事件了，这里我们通过<code>CheckMenuItem</code>来设置菜单项的勾选效果与取消勾选。</p>
+<p>关于图标，我看到AI编写的使用<code>SetMenuItemInfo</code>设置的图标，但是代码太复杂了，这里以简单的<code>SetMenuItemBitmaps</code>为例：</p>
+<p>首先，Win32菜单图标类型与.NET的图标类型不一样，要想使用，必须经过<strong>类型转换</strong>，并且根据函数定义我们需要传递图标的<strong>句柄指针</strong>。</p>
+<p>图标应该按照Windows应用的范式开发，我这里选择的图标尺寸为18，并且我遇到一个问题：在VB.NET下的<code>Color.Transparent</code>虽然是透明色，但实际因为转换类型的原因，图标<strong>不是完全的透明</strong>，自身存在锯齿，甚至在鼠标掠过时还会突然变白，因此我想到了一种曲线救国的方式：</p>
+<pre><code class="language-vbnet">    ''' &lt;summary&gt;
+    ''' 为指定的菜单项设置图标, 并处理透明度背景模拟
+    ''' &lt;/summary&gt;
+    ''' &lt;param name=&quot;hMenu&quot;&gt;菜单句柄(hMenu)&lt;/param&gt;
+    ''' &lt;param name=&quot;wParam&quot;&gt;菜单项标识符(wParam)&lt;/param&gt;
+    ''' &lt;param name=&quot;icon&quot;&gt;原始图标资源&lt;/param&gt;
+    ''' &lt;param name=&quot;isDarkMode&quot;&gt;是否为深色模式&lt;/param&gt;
+Public Sub ApplyMenuIcon(hMenu As IntPtr, wParam As Integer, icon As Bitmap, Optional isDarkMode As Boolean = False)
+    '释放旧的位图句柄
+    Dim mii As New MENUITEMINFO With {
+        .cbSize = Marshal.SizeOf(Of MENUITEMINFO)(),
+        .fMask = MIIM_BITMAP
+    }
+    If GetMenuItemInfo(hMenu, wParam, False, mii) Then
+        If mii.hbmpItem &lt;&gt; IntPtr.Zero Then
+            DeleteObject(mii.hbmpItem)
+        End If
+    End If
+    '创建新位图并设置
+    Dim size As Integer = 18 '图标尺寸
+    Using resizedBmp As New Bitmap(size, size, PixelFormat.Format24bppRgb)
+        Using g As Graphics = Graphics.FromImage(resizedBmp) '设置高质量缩放参数
+            g.InterpolationMode = InterpolationMode.HighQualityBicubic
+            g.SmoothingMode = SmoothingMode.HighQuality
+            g.PixelOffsetMode = PixelOffsetMode.HighQuality
+            g.CompositingQuality = CompositingQuality.HighQuality
+            '清空背景, 并按照主题填充
+            If isDarkMode Then
+                g.Clear(Color.FromArgb(43, 43, 43))
+            Else
+                g.Clear(SystemColors.Menu)
+            End If
+            '计算保持宽高比的绘制区域
+            Dim srcWidth As Integer = icon.Width
+            Dim srcHeight As Integer = icon.Height
+            '计算缩放比例
+            Dim ratio As Double = Math.Min(size / srcWidth, size / srcHeight)
+            Dim newWidth As Integer = CInt(srcWidth * ratio)
+            Dim newHeight As Integer = CInt(srcHeight * ratio)
+            Dim x As Integer = (size - newWidth) \ 2
+            Dim y As Integer = (size - newHeight) \ 2
+            g.DrawImage(icon, New Rectangle(x, y, newWidth, newHeight), 0, 0, srcWidth, srcHeight, GraphicsUnit.Pixel)
+        End Using '绘制缩放后的图像
+        Dim hBitmap = resizedBmp.GetHbitmap()
+        SetMenuItemBitmaps(hMenu, wParam, MF_BYCOMMAND, hBitmap, Nothing)
+    End Using
+End Sub
+</code></pre>
+<p><strong>注意：这里我使用了一个深色主题参数，因为我们需要知道菜单的背景颜色，这样我们可以绘制外观上看不出来的菜单图标并设置，但需要注意，这种“透明”实际上并不是真的透明，只是一种妥协的方案。</strong></p>
+<p>随后在代码里使用：</p>
+<pre><code class="language-vbnet">Dim menuHandle = GetSystemMenu(Handle, False) '设置窗体菜单句柄
+If isDarkMode Then
+    ApplyMenuIcon(menuHandle, SC_ALWAYSONTOP, My.Resources.Icons.MenuPinDark, True)
+Else
+    ApplyMenuIcon(menuHandle, SC_ALWAYSONTOP, My.Resources.Icons.MenuPinLight)
+End If
+</code></pre>
+<p>最后通过API设置组合键内容的显示，深色模式，勾选状态，无效状态等，我们就得到了实际的菜单，效果如下：</p>
+<p><img alt="浅色模式菜单" src="../assets/FAS%E7%AA%97%E4%BD%93%E8%8F%9C%E5%8D%95%E6%B5%85%E8%89%B2.png" /></p>
+<p>*其实这张图是比较早时候的截图了，后来我添加了组合键的支持以及菜单无效状态，新的效果如下（深色模式）：</p>
+<p><img alt="深色模式菜单" src="../assets/FAS%E7%AA%97%E4%BD%93%E8%8F%9C%E5%8D%95%E6%B7%B1%E8%89%B2.png" /></p>
+<p>关于菜单的图标配色，我其实是故意这么选择的，因为这样才可以让用户觉得菜单也是程序的一部分，从而更喜欢我的产品，尤其是深色模式的菜单图标，看起来更灵动，我本人就非常喜欢这种夜里发光的效果，它看起来特别好看，给人一种有希望的感觉。</p>
+<p>关于菜单的设计就到这里了，下一个博客我会讲解关于主题适配方面的内容。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

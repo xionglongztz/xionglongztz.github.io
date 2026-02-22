@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://xionglongztz.github.io/paws/%E5%85%B3%E4%BA%8EPawManager%E9%A1%B9%E7%9B%AE%EF%BC%88%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/">
       
       
-        <link rel="prev" href="../../thinking/%E5%AF%B9%E4%B8%8D%E5%90%8C%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%80%9D%E8%80%83%EF%BC%9A%E4%B8%BA%E7%88%B1%E5%8F%91%E7%94%B5%E7%9C%9F%E7%9A%84%E5%80%BC%E5%BE%97%E5%90%97/">
+        <link rel="prev" href="../FAS%E5%88%9D%E4%BB%A3%E8%AE%BE%E8%AE%A1%EF%BC%9A%E5%9B%BE%E7%89%87%E5%A2%99/">
       
       
         <link rel="next" href="../%E5%85%B3%E4%BA%8EPaw%E7%B3%BB%E5%88%97%E6%9A%82%E5%81%9C%E5%BC%80%E5%8F%91%E4%B8%8E%E6%96%B0%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%90%AF%E5%8A%A8/">
@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.2">
     
     
       
@@ -476,6 +476,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAS%E5%88%9D%E4%BB%A3%E8%AE%BE%E8%AE%A1%EF%BC%9A%E5%9B%BE%E7%89%87%E5%A2%99/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS初代设计：图片墙
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -553,6 +581,34 @@
     
   
     FAS架构设计：稿件库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAS%E5%A4%96%E8%A7%82%E8%AE%BE%E8%AE%A1%EF%BC%9A%E8%8F%9C%E5%8D%95%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS外观设计：菜单系统
   
 
     
@@ -745,7 +801,7 @@ Public NotInheritable Class Logger
 End Class
 </code></pre>
 <p>这个就是我自己设计的日志记录的核心部分了，完整代码你可以在<a href="https://github.com/PawLaboratory/Core">PawLaboratory/Core</a>看到，下图为这个日志库实际显示效果：</p>
-<p><img alt="(Logger.vb实际显示效果)" src="../../assets/images/LoggerShow.png" /></p>
+<p><img alt="(Logger.vb实际显示效果)" src="../assets/LoggerShow.png" /></p>
 <p>我这样设计不仅是为了方便我后续在使用基础设施的时候更方便更容易的输出颜色字符，同时也是考虑到其他插件开发者会尝试在日志输出东西用的，就像Minecraft服务器插件那样，为插件开发者提供更自由的方式。</p>
 <p>至于颜色显示部分，我参考了Minecraft服务器插件的实现，使用格式化代码（<code>§</code>）加上字母和数字去实现变色效果，并且设计了一套特有的算法，在记录日志的同时写入文件，并且能够过滤颜色相关字符。这里我注意到：Windows的命令提示符的<code>color</code>命令的数字与颜色竟然刚好与Minecraft对应的上，似乎都是为了兼容16位显示模式的。</p>
 <p>在开发日志库的时候，我有考虑到几个问题：</p>
