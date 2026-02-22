@@ -8,9 +8,11 @@ nav:
     - 关于DDRKirby(ISQ)的博客的思考: thinking/关于DDRKirby(ISQ)的博客的思考.md
     - 对不同开源项目的思考：为爱发电真的值得吗: thinking/对不同开源项目的思考：为爱发电真的值得吗.md
   - Paws:
+    - FAS初代设计：图片墙: paws/FAS初代设计：图片墙.md
     - 关于PawManager项目（日志系统开发篇）: paws/关于PawManager项目（日志系统开发篇）.md
     - 关于Paw系列暂停开发与新项目的启动: paws/关于Paw系列暂停开发与新项目的启动.md
     - FAS架构设计：稿件库: paws/FAS架构设计：稿件库.md
+    - FAS外观设计：菜单系统: paws/FAS外观设计：菜单系统.md
   - AI:
     - 关于AI的系统提示词的破解与思考: AI/关于AI的系统提示词的破解与思考.md
 theme:
