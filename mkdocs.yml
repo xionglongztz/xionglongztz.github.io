@@ -15,6 +15,8 @@ nav:
     - FAS外观设计：菜单系统: paws/FAS外观设计：菜单系统.md
   - AI:
     - 关于AI的系统提示词的破解与思考: AI/关于AI的系统提示词的破解与思考.md
+  - Other:
+    - 图片颜色量化：Chromis设计: other/图片颜色量化：Chromis设计.md
 theme:
   name: material # 主题为material
   custom_dir: docs/overrides
