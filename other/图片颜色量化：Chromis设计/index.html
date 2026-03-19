@@ -1,0 +1,1382 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://xionglongztz.github.io/other/%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B2%E9%87%8F%E5%8C%96%EF%BC%9AChromis%E8%AE%BE%E8%AE%A1/">
+      
+      
+        <link rel="prev" href="../../AI/%E5%85%B3%E4%BA%8EAI%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%9A%84%E7%A0%B4%E8%A7%A3%E4%B8%8E%E6%80%9D%E8%80%83/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+    
+    
+      
+        <title>图片颜色量化：Chromis设计 - 小狼的实验室</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+  <meta name="theme-color" content="#7CBDFF">
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chromis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="小狼的实验室" class="md-header__button md-logo" aria-label="小狼的实验室" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            小狼的实验室
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              图片颜色量化：Chromis设计
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="小狼的实验室" class="md-nav__button md-logo" aria-label="小狼的实验室" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    小狼的实验室
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Homepage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DIY
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    DIY
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DIY/%E8%BF%9C%E5%8F%A4%E7%9A%84%E5%9B%9E%E5%93%8D%EF%BC%9A%E6%8B%86%E8%A7%A3%E5%88%86%E6%9E%90%E8%80%81%E5%BC%8F%E5%BE%AE%E6%B3%A2%E7%82%89%E8%AE%A1%E6%97%B6%E5%99%A8%E6%80%BB%E6%88%90/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    远古的回响：拆解分析老式微波炉计时器总成
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Thinking
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Thinking
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thinking/%E5%85%B3%E4%BA%8EDDRKirby%28ISQ%29%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%80%9D%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于DDRKirby(ISQ)的博客的思考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thinking/%E5%AF%B9%E4%B8%8D%E5%90%8C%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%80%9D%E8%80%83%EF%BC%9A%E4%B8%BA%E7%88%B1%E5%8F%91%E7%94%B5%E7%9C%9F%E7%9A%84%E5%80%BC%E5%BE%97%E5%90%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    对不同开源项目的思考：为爱发电真的值得吗
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Paws
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Paws
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paws/FAS%E5%88%9D%E4%BB%A3%E8%AE%BE%E8%AE%A1%EF%BC%9A%E5%9B%BE%E7%89%87%E5%A2%99/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS初代设计：图片墙
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paws/%E5%85%B3%E4%BA%8EPawManager%E9%A1%B9%E7%9B%AE%EF%BC%88%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E7%AF%87%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于PawManager项目（日志系统开发篇）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paws/%E5%85%B3%E4%BA%8EPaw%E7%B3%BB%E5%88%97%E6%9A%82%E5%81%9C%E5%BC%80%E5%8F%91%E4%B8%8E%E6%96%B0%E9%A1%B9%E7%9B%AE%E7%9A%84%E5%90%AF%E5%8A%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于Paw系列暂停开发与新项目的启动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paws/FAS%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%EF%BC%9A%E7%A8%BF%E4%BB%B6%E5%BA%93/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS架构设计：稿件库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../paws/FAS%E5%A4%96%E8%A7%82%E8%AE%BE%E8%AE%A1%EF%BC%9A%E8%8F%9C%E5%8D%95%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS外观设计：菜单系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/%E5%85%B3%E4%BA%8EAI%E7%9A%84%E7%B3%BB%E7%BB%9F%E6%8F%90%E7%A4%BA%E8%AF%8D%E7%9A%84%E7%A0%B4%E8%A7%A3%E4%B8%8E%E6%80%9D%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    关于AI的系统提示词的破解与思考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Other
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Other
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图片颜色量化：Chromis设计
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图片颜色量化：Chromis设计
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        K-Means聚类算法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#median-cut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        中位切分（Median Cut）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#octree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        八叉树（Octree）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开始设计
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LOGO设计
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#k-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        K-Means聚类算法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#median-cut" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        中位切分（Median Cut）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#octree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        八叉树（Octree）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开始设计
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        LOGO设计
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chromis">图片颜色量化：Chromis设计</h1>
+<p>我的<a href="https://github.com/xionglongztz/FurryArtStudio">FurryArtStudio</a>（下文简称<strong>FAS</strong>）终于有一些人气了，在短短一个月左右的时间，已经收到7个Pull Requests，3个Issues，贡献者达4名，提交总数超100，目前我考虑设计一个新的功能在我的项目里，也就是对图片进行量化处理。</p>
+<h2 id="_1">前言</h2>
+<p>在很久之前，我设计了一个还没开源的小工具<strong>ImageWizard</strong>，它是一个图片编辑器，我最初设想是制作一个WinForms应用，能够比PhotoShop开启的更快，同时能够进行简单的图片编辑。但这个项目很快就放弃了，因为我还没研究过<strong>图形API</strong>，我是使用<code>Drawing</code>的<code>SetPixel()</code>对图像进行操作的，甚至我还没有使用并行处理，速度极慢，靠我的<strong>i7-10870</strong>CPU处理的话，大致需要3秒才会处理完一张<code>1920*1080</code>的图片。</p>
+<p>不过，我想到有些Furry创作者可能会使用<strong>颜色提取</strong>功能，因为用作参考非常方便，所以我把我之前的<strong>ImageWizard</strong>里面的算法提取出来，用作我的<strong>FAS</strong>的一部分。</p>
+<p>在1.0.6版本，我考虑添加一个属性窗口，允许用户在图片预览器里按下特定组合键并查看<strong>稿件属性</strong>（SQLite里存储的元数据字段），<strong>文件属性</strong>（文件大小，类型，哈希等），<strong>图像属性</strong>（图像位深，分辨率，以及今天要讲的<strong>颜色提取</strong>）。</p>
+<p>我搜了下相关内容，发现主流的颜色提取算法大致如下：</p>
+<table>
+<thead>
+<tr>
+<th>算法</th>
+<th>K-Means聚类</th>
+<th>中位切分（Median Cut）</th>
+<th>八叉树（Octree）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>速度</td>
+<td>慢</td>
+<td>中等</td>
+<td><strong>快</strong></td>
+</tr>
+<tr>
+<td>准确度</td>
+<td><strong>精准</strong></td>
+<td>粗略</td>
+<td>中等</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>平衡</td>
+<td><strong>快速</strong></td>
+<td>内存高效</td>
+</tr>
+<tr>
+<td>量化程度</td>
+<td>受初始聚类点影响</td>
+<td>较为粗略，受限于算法性质</td>
+<td><strong>精准</strong></td>
+</tr>
+</tbody>
+</table>
+<p>三种方法各有优劣，取决于具体使用场景。</p>
+<h2 id="k-means">K-Means聚类算法</h2>
+<ul>
+<li>首先定义n个初始点，这n个点作为聚类中心。</li>
+<li>然后计算所有像素距离这些聚类中心的距离（<strong>欧几里得距离</strong>，也就是<strong>两点最短长度</strong>），寻找最小的那个，把像素添加到对应的聚类中。</li>
+<li><strong>欧几里得算法</strong>具体计算方式是计算<code>Δr=R1-R2</code>，<code>Δg=G1-G2</code>，<code>Δb=B1-B2</code>，随后计算<strong>根号下</strong><code>Δr^2 + Δg^2 + Δb^2</code>。</li>
+<li>随后把每个聚类中心的全部点的像素求平均值，也就是把全部的R加起来，除以点总数求出平均颜色的R值，同理计算G和B的值。</li>
+<li>继续迭代，直至颜色<strong>收敛</strong>或<strong>达到设定迭代次数</strong>。</li>
+</ul>
+<h2 id="median-cut">中位切分（Median Cut）</h2>
+<ul>
+<li>将全部颜色放到一个立方体空间中（将R，G和B分别映射为空间中X，Y和Z坐标）。</li>
+<li>通过<strong>递归</strong>，切分立方体里最长的边，切的方向与立方体最长的平面垂直。</li>
+<li>继续切分，直至立方体数量等于所需要的像素数量。</li>
+<li>将每个立方体内颜色取平均值。</li>
+</ul>
+<h2 id="octree">八叉树（Octree）</h2>
+<p>这是我觉得最有意思的一个算法。</p>
+<ul>
+<li>首先将颜色转换成二进制，得到它们的RGB分量。</li>
+<li>例如，<code>R=255</code>的二进制就是<code>0x11111111</code>，同理求出G和B的二进制。</li>
+<li>将二进制竖向排列，第一位的数字结合，得到一个三位二进制数。</li>
+<li>根据这些数，放置在树的叶片上</li>
+<li>一旦节点数足够，则清除这个节点，并把它下方的颜色合并</li>
+</ul>
+<p>总的来说，还是很复杂，我其实也不是特别了解，只有K-Means算法我稍微读懂了一些。</p>
+<h2 id="_2">开始设计</h2>
+<p>于是我设计了一个开源项目<strong>Chromis</strong>，它就是专门处理颜色量化的，最初我考虑将他用在跨平台项目里，但是它还是有些问题，比如在<code>.NET 8.0</code>下，它不支持<code>System.Drawing</code>下的<code>Image</code>和<code>Bitmap</code>等类，所以我尝试使用<a href="https://github.com/SixLabors/ImageSharp">ImageSharp</a>等第三方库去处理，然而，我发现我的FAS是<code>.NET Framework 4.7.2</code>，新版本的<code>ImageSharp</code>不能完全支持。</p>
+<p>于是后来，我就想到我这个类库的初衷：可以不处理<strong>图像</strong>，只处理<strong>算法</strong>，只要我使用的全都是跨平台的，最底层的数据类型，就可以不用担心跨平台操作了。</p>
+<p>于是我自定义了一套数据类型，以及它的一些定义：</p>
+<pre><code class="language-vbnet">Public Class ColorExtractor
+    ''' &lt;summary&gt;
+    ''' 颜色结构体
+    ''' &lt;/summary&gt;
+    Public Structure RGBColor
+        Public R As Byte
+        Public G As Byte
+        Public B As Byte
+        ''' &lt;summary&gt;
+        ''' 根据RGB构造RGBColor
+        ''' &lt;/summary&gt;
+        ''' &lt;param name=&quot;r&quot;&gt;红色&lt;/param&gt;
+        ''' &lt;param name=&quot;g&quot;&gt;绿色&lt;/param&gt;
+        ''' &lt;param name=&quot;b&quot;&gt;蓝色&lt;/param&gt;
+        ''' &lt;returns&gt;&lt;seealso cref=&quot;RGBColor&quot;/&gt;类型&lt;/returns&gt;
+        Public Shared Function FromRGB(r As Integer, g As Integer, b As Integer) As RGBColor
+            Dim _color As New RGBColor With {
+                .R = r,
+                .G = g,
+                .B = b
+            }
+            Return _color
+        End Function
+
+        ''' &lt;summary&gt;
+        ''' 转换成十六进制
+        ''' &lt;/summary&gt;
+        ''' &lt;returns&gt;获得十六进制格式(如#7CBDFF)&lt;/returns&gt;
+        Public Function ToHex() As String
+            Return $&quot;#{R:X2}{G:X2}{B:X2}&quot;
+        End Function
+
+        ''' &lt;summary&gt;
+        ''' 获得三元组格式
+        ''' &lt;/summary&gt;
+        Public Function ToTuple() As (Byte, Byte, Byte)
+            Return (R, G, B)
+        End Function
+    End Structure
+    '...
+End Class
+</code></pre>
+<p>这样，使用<code>.NET Framework</code>的可以使用<code>Drawing</code>下自带的库，使用<code>.NET Core</code>的可以食用<code>ImageSharp</code>等第三方库，真正做到跨平台。</p>
+<p>随后，为了提升程序的可扩展性，我给每个算法提供了标准的接口定义：</p>
+<pre><code class="language-vbnet">Public Class ColorExtractor
+    Public Interface IColorExtractor
+        Function Extract(pixels As List(Of RGBColor), colorCount As Integer) As IReadOnlyList(Of ColorInfo)
+    End Interface
+End Class
+
+Public Class KMeans
+    Implements IColorExtractor
+    Public Function Extract(pixels As List(Of RGBColor), clusterCount As Integer) As IReadOnlyList(Of ColorInfo) Implements IColorExtractor.Extract
+        '...
+    End Function
+End Class
+
+Public Class MedianCut
+    Implements IColorExtractor
+    Public Function Extract(pixels As List(Of RGBColor), colorCount As Integer) As IReadOnlyList(Of ColorInfo) Implements IColorExtractor.Extract
+        '...
+    End Function
+End Class
+
+Public Class Octree
+    Implements IColorExtractor
+    Public Function Extract(pixels As List(Of RGBColor), colorCount As Integer) As IReadOnlyList(Of ColorInfo) Implements IColorExtractor.Extract
+        '...
+    End Function
+End Class
+</code></pre>
+<p>（完整代码可以看我的<a href="https://github.com/xionglongztz/Chromis">GitHub</a>仓库）</p>
+<p>同时，为了让返回的值标准化，我写了一个新的结构体，包含了之前定义的颜色结构体：</p>
+<pre><code class="language-vbnet">    ''' &lt;summary&gt;
+    ''' 包含一套颜色与占比的结果结构体
+    ''' &lt;/summary&gt;
+    Public Structure ColorInfo
+        ''' &lt;summary&gt;
+        ''' 颜色
+        ''' &lt;/summary&gt;
+        Public Color As RGBColor
+        ''' &lt;summary&gt;
+        ''' 该颜色对应的比率, 范围为 0 到 1
+        ''' &lt;/summary&gt;
+        Public Ratio As Single
+    End Structure
+</code></pre>
+<p>为了保证方便使用，我在<code>ColorExtracter.vb</code>这个主类里添加了一个快捷使用方法，通过接口定义。同时，为了保证这个类库的扩展性，我添加了这么一个工厂，允许用户自定义自己的提取方法，它可以添加自己的方法到枚举中，同时通过前文定义的接口来维持契约：</p>
+<pre><code class="language-vbnet">    ''' &lt;summary&gt;
+    ''' 提取类型
+    ''' &lt;/summary&gt;
+    Public Enum ExtractType
+        ''' &lt;summary&gt;
+        ''' K-Means聚类
+        ''' &lt;/summary&gt;
+        KMeans
+        ''' &lt;summary&gt;
+        ''' 中位切分
+        ''' &lt;/summary&gt;
+        MedianCut
+        ''' &lt;summary&gt;
+        ''' 八叉树
+        ''' &lt;/summary&gt;
+        Octree
+    End Enum
+
+    ''' &lt;summary&gt;
+    ''' 提取图像的主要颜色
+    ''' &lt;/summary&gt;
+    ''' &lt;param name=&quot;pixels&quot;&gt;要被处理的像素点&lt;/param&gt;
+    ''' &lt;param name=&quot;colorCount&quot;&gt;颜色数量&lt;/param&gt;
+    ''' &lt;param name=&quot;extractType&quot;&gt;(可选)提取方式,默认为&lt;seealso cref=&quot;Octree&quot;/&gt;&lt;/param&gt;
+    Public Shared Function Extract(pixels As List(Of RGBColor), colorCount As Integer, Optional extractType As ExtractType = ExtractType.Octree) As List(Of ColorInfo)
+        Dim extractor = ExtractorFactory(extractType)(colorCount)
+        Return extractor.Extract(pixels, colorCount)
+    End Function
+
+    ''' &lt;summary&gt;
+    ''' 注册一个自己的提取算法
+    ''' &lt;/summary&gt;
+    ''' &lt;param name=&quot;type&quot;&gt;提取类型名称&lt;/param&gt;
+    ''' &lt;param name=&quot;factory&quot;&gt;工厂&lt;/param&gt;
+    Public Shared Sub Register(type As ExtractType, factory As Func(Of Integer, IColorExtractor))
+        ExtractorFactory(type) = factory
+    End Sub
+
+    Private Shared ReadOnly ExtractorFactory As New Dictionary(Of ExtractType, Func(Of Integer, IColorExtractor)) From {
+    {ExtractType.KMeans, Function(count) New KMeans()},
+    {ExtractType.MedianCut, Function(count) New MedianCut()},
+    {ExtractType.Octree, Function(count) New Octree()}
+}
+</code></pre>
+<p>在使用时，需要将图片进行量化（降低处理时间），同时需要将<code>Rgb64</code>（<code>SixLabors.ImageSharp</code>）或<code>Color</code>（<code>System.Drawing</code>）等颜色类型转换成<code>RGBColor</code>（<code>Chromis</code>）需要使用的类型，而接收函数返回的数据时，需要反过来，示例代码如下：</p>
+<pre><code class="language-vbnet">Imports Chromis
+
+Dim pixels As New List(Of ColorExtractor.RGBColor)
+'将已量化的像素转换成 ColorExtractor.RGBColor 类型
+For Each sampledColor In GetPixelsFromImage(PictureBox1.Image)
+    pixels.Add(ColorExtractor.RGBColor.FromRGB(sampledColor.R, sampledColor.G, sampledColor.B))
+Next
+'提取
+Dim colorInfos = ColorExtractor.Extract(pixels, 10)
+'输出颜色值与百分比
+For Each ci In colorInfos
+    Console.WriteLine($&quot;{ci.Color.R}, {ci.Color.G}, {ci.Color.B} - {ci.Ratio:P}&quot;)
+Next
+</code></pre>
+<p>在本地测试没有问题后，编写一个GitHub Actions脚本，在构建成功后提交到NuGet：</p>
+<pre><code class="language-yaml">name: Publish NuGet
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    environment: Nuget
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build -c Release --no-restore
+
+    - name: Pack
+      run: dotnet pack -c Release --no-build
+
+    - name: Publish to NuGet
+      run: dotnet nuget push &quot;**/*.nupkg&quot; --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+</code></pre>
+<p>在使用前，我们首先在<a href="https://www.nuget.org/account/apikeys">NuGet</a>那边获得一个APIkey，点击<code>Create</code>，设置名字（名字随意，我是设置成<code>Chromis Release</code>），然后设置<code>Glob pattern</code>为<code>Chromis*</code>，这就可以保证这个Key只能用作更新Chromis来使用。</p>
+<p><strong>注意：Key只有生成时复制这一次机会，一旦刷新当前网页便再也不能复制，同时不要将这个APIKey泄露给其他人。</strong></p>
+<p>回到GitHub，在项目仓库的顶端<code>Settings</code>下找到<code>Secrets and variables</code>，找到<code>Actions</code>，我们先新增一个<code>Environment</code>（环境，这里我写的是<code>Nuget</code>，注意要和GitHub Actions脚本里要保持一致，也就是<code>environment: Nuget</code>这一行）。</p>
+<p>然后我们添加一个新的密钥，名称是<code>NUGET_API_KEY</code>（同样记得和GitHub Actions脚本保持一致），值填写我们前面复制的那串字符（大概像这样：<code>oy2pp***uv63q</code>）。</p>
+<p>随后，我们就可以在每次提交带有<code>v</code>的标签时自动触发构建了。</p>
+<p>为了更优雅，我编写了一个<strong>PowerShell脚本</strong>，可以直接运行：</p>
+<pre><code class="language-powershell"># ASCII Art
+Write-Host &quot;   ____ _                         _     &quot; -ForegroundColor Cyan
+Write-Host &quot;  / ___| |__  _ __ ___  _ __ ___ (_)___ &quot; -ForegroundColor Cyan
+Write-Host &quot; | |   | '_ \| '__/ _ \| '_ `` _ \| / __|&quot; -ForegroundColor Cyan
+Write-Host &quot; | |___| | | | | | (_) | | | | | | \__ \&quot; -ForegroundColor Cyan
+Write-Host &quot;  \____|_| |_|_|  \___/|_| |_| |_|_|___/&quot; -ForegroundColor Cyan
+Write-Host
+
+# 定义
+$scriptDir = $PSScriptRoot # 脚本路径
+
+# 读取 Chromis.vbproj
+$projectFile = Join-Path $scriptDir &quot;Chromis.vbproj&quot;
+$content = Get-Content -Path $projectFile -Raw -ErrorAction Stop
+
+# 正则匹配版本号
+$pattern = '&lt;Version&gt;(.*?)&lt;/Version&gt;'
+$match = [regex]::Match($content, $pattern)
+
+# 提取版本号并去除前后空格
+$version = $match.Groups[1].Value.Trim()
+if ([string]::IsNullOrWhiteSpace($version)) {
+    Write-Error &quot;Version is empty&quot; -ForegroundColor Red
+    Start-Sleep -Seconds 5 # 自动退出
+    exit 1
+}
+
+# 构建标签名
+$tagName = &quot;v$version&quot;
+Write-Host &quot;Version: $version&quot;
+
+# 检查本地与远程版本号
+$localExists = $false
+git rev-parse -q --verify &quot;refs/tags/$tagName&quot; &gt; $null 2&gt;&amp;1
+if ($LASTEXITCODE -eq 0) {
+    $localExists = $true
+    Write-Host &quot;Deleting local version...&quot;
+    git tag -d $tagName
+}
+$remoteExists = $false
+git ls-remote --exit-code origin &quot;refs/tags/$tagName&quot; &gt; $null 2&gt;&amp;1
+if ($LASTEXITCODE -eq 0) {
+    $remoteExists = $true
+    Write-Host &quot;Deleting remote version...&quot;
+    git push origin :refs/tags/$tagName
+}
+
+git tag $tagName
+git push origin $tagName
+
+Write-Host &quot;Nuget publish successfully.&quot; -ForegroundColor Green
+Start-Sleep -Seconds 5 # 自动退出
+</code></pre>
+<p>运行后，它能够自动读取当前版本号，然后拼接到git命令上，最后自动推送，触发GitHub那边的生成和发布。</p>
+<p>在发布后，大概需要等几分钟，验证成功后包就会在<a href="https://www.nuget.org/packages/Chromis">NuGet</a>那边看到了，随后再等几分钟，所有使用这个项目的库在自己的Visual Studio 的NuGet包管理器里就可以看到更新了</p>
+<h2 id="logo">LOGO设计</h2>
+<p>这个名字是<strong>ChatGPT</strong>帮我起的，我其实想要让我的这个库足够小（实测只有十几KB），同时解决巨大的功能，类似于<a href="https://github.com/DapperLib/Dapper">Dapper</a>这样的名字和这样的功能。</p>
+<p>而当我设计LOGO时，我搜了下这个名字，它的名字叫<a href="https://zh.wikipedia.org/wiki/%E5%85%89%E9%B0%93%E9%AD%9A">光鳃鱼</a>，不得不说ChatGPT这个起名有点图形学的感觉了。</p>
+<p>于是我就开始设计LOGO，我想的是构思一个抽象的鱼的图案，同时周围有多个不同颜色的点作为点缀，同时代表它量化颜色的能力，最后还得考虑将他压缩至<code>128×128</code>尺寸以适配NuGet包管理器页面的要求，所以需要尽可能保留最多的细节。</p>
+<p>在设计的基本没问题时，我同时设计了Banner图片，让它看起来更像是一个正经的库了。</p>
+<p>现在就差坐着猛猛吸Star了（笑）。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
