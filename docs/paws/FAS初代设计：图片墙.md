@@ -26,7 +26,7 @@ System.ComponentModel.Win32Exception:“创建窗口句柄时出错。”
 
 我不知道壁纸引擎是为什么能够做到一页最高100张图片，并且流畅运动，甚至还会播放动图的，这给我一种非常匪夷所思的感觉，随后我问了**ChatGPT**，ChatGPT告诉我：其实壁纸引擎的实现方式是：一个窗口，其他的图片都是“画”出来的。并且壁纸引擎本身也使用了GPU加速，这使得一页存在大量的图片成为可能。
 
-后来我要求ChatGPT编写了一个图片墙，详细的代码请在我的[GitHub](https://github.com/xionglongztz/FurryArtStudio)里查看。
+后来我要求ChatGPT编写了一个图片墙，详细的代码请在我的[GitHub](https://github.com/PawLaboratory/FurryArtStudio)里查看。
 
 后来我知道，除了图片墙，还需要考虑很多东西，比如**虚拟化**技术，当然这里和虚拟机的虚拟化不是一个含义。
 
@@ -412,4 +412,4 @@ End Enum
 #End Region
 ```
 
-这就是我的图片墙的实现原理，完整代码请点[这里](https://github.com/xionglongztz/FurryArtStudio)，在之后的文章里，我会介绍下关于**菜单系统**，**主题**，**关于页**，**图片浏览器**的设计。
+这就是我的图片墙的实现原理，完整代码请点[这里](https://github.com/PawLaboratory/FurryArtStudio)，在之后的文章里，我会介绍下关于**菜单系统**，**主题**，**关于页**，**图片浏览器**的设计。

@@ -1,6 +1,6 @@
 # 图片颜色量化：Chromis设计
 
-我的[FurryArtStudio](https://github.com/xionglongztz/FurryArtStudio)（下文简称**FAS**）终于有一些人气了，在短短一个月左右的时间，已经收到7个Pull Requests，3个Issues，贡献者达4名，提交总数超100，目前我考虑设计一个新的功能在我的项目里，也就是对图片进行量化处理。
+我的[FurryArtStudio](https://github.com/PawLaboratory/FurryArtStudio)（下文简称**FAS**）终于有一些人气了，在短短一个月左右的时间，已经收到7个Pull Requests，3个Issues，贡献者达4名，提交总数超100，目前我考虑设计一个新的功能在我的项目里，也就是对图片进行量化处理。
 
 ## 前言
 

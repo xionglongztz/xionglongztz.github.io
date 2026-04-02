@@ -37,6 +37,7 @@ End Function
 | 维度 | PawManager | Furry Art Studio |
 | ---- | ---------- | --------------- |
 | 架构 | 基于VB.net Core扩展 | **仅VB.net WinForms** |
+| 技术栈 | WinForms窗体应用 | 控制台应用 |
 | 难度 | **极高** | 相对容易 |
 | 数据库支持 | 所有主流SQL数据库（SQLite，PostgreSQL，SQL Server，MySQL） | **仅SQLite** |
 | 跨平台支持 | **是** | 否 |
