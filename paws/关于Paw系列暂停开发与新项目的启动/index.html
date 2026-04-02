@@ -908,14 +908,14 @@ End Function
 </code></pre>
 <p>这么做表面看是解决了问题，不过还是有些问题在里面，尤其是将来可能的技术债。</p>
 <p>于是我开始从另一个重要的方向，也就是IPC方面开发，先从Windows支持开始，但我发现这是一个系统的工程，我需要为将来的不少设计铺路，短期来看也不是什么容易的方法，更何况我其实很不喜欢JSON，因为JSON稍不注意格式就会出错，本身不是人类可读。所以从必走的另一条路线来看也是很难实现的，这是由于我自身的局限性导致的，就像是一个闯关游戏卡关了一样。</p>
-<p>于是我做了一个大胆的决定：<strong>暂停开发<code>PawCore</code>，专注于开发另一个工具</strong>：<code>Furry Art Studio</code>（简称<code>FAS</code>）。</p>
+<p>于是我做了一个大胆的决定：<strong>暂停开发<code>PawCore</code>，专注于开发另一个工具</strong>：<code>FurryArtStudio</code>（简称<code>FAS</code>）。</p>
 <p>相比于<code>Paw</code>系列，<code>FAS</code>与前者的架构有很大的不同，这让一个几乎不可能的任务变得比较容易实现：</p>
 <table>
 <thead>
 <tr>
 <th>维度</th>
 <th>PawManager</th>
-<th>Furry Art Studio</th>
+<th>FurryArtStudio</th>
 </tr>
 </thead>
 <tbody>
@@ -990,7 +990,7 @@ End Function
 <p>另外，对于安卓版本开发，我暂时还没有打算，因为我本人还没了解过安卓端开发，这部分我会通过暴露IPC接口的方式，由其他社区内成员来开发安卓端的第三方客户端吧。</p>
 <p>我会秉持着开源，免费的方式去开发和设计我的应用，我不会售卖源代码，同时我也会尽可能申请代码签名，软著，LOGO商标等等来维护我的权益。</p>
 <p>关于新的项目的Splash，我考虑找画师绘制并购买商业版权，通过一个原创的“兽”作为品牌商标，Slogan就叫“我的稿件我做主”怎么样？感觉可能有点土，但是就这样吧，我不指望它真的火起来，要是我的项目GitHub真的有10K个Star我都谢天谢地了（笑）。</p>
-<p>目前几乎所有项目都是Private权限，直到我成功开发出能用的版本，我才会公开发布。这段时间除了软件本身逻辑，下一步就是开发我自己的VB.net WinForms组件<code>PawUI</code>项目了，这个项目在将来可以在<code>PawManager</code>以及<code>Furry Art Studio</code>都能利用上。</p>
+<p>目前几乎所有项目都是Private权限，直到我成功开发出能用的版本，我才会公开发布。这段时间除了软件本身逻辑，下一步就是开发我自己的VB.net WinForms组件<code>PawUI</code>项目了，这个项目在将来可以在<code>PawManager</code>以及<code>FurryArtStudio</code>都能利用上。</p>
 <p>目前的PawCore外观如下，隐藏了部分信息到<code>info</code>命令中：</p>
 <p><img alt="目前的PawCore外观" src="../assets/PawCorePic.png" /></p>
 
