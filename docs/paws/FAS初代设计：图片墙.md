@@ -226,7 +226,7 @@ Public Class SelectionChangedEventArgs
 End Class
 ```
 
-幽灵代码问题是在2月10日发现的，当天晚上11电，我让**Gemini**帮我修好了。
+幽灵代码问题是在2月10日发现的，当天晚上11点，我让**Gemini**帮我修好了。
 
 这样，幽灵代码的问题就彻底解决了，对应在主窗体的事件就可以这么写：
 

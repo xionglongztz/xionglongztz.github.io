@@ -1,6 +1,6 @@
 # xionglongztz.github.io
 
-这是我的个人 GitHub Pages 站点仓库。[点击前往](https://xionglongztz.github.io/)
+这是我的个人 GitHub Pages 站点仓库。[点击前往](https://blog.pawlabs.top/)
 
 站点使用 MkDocs 构建，用于长期记录我的学习过程、项目实践以及技术思考。
 
