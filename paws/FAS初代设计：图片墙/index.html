@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.5">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -622,6 +622,62 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAS%E5%BD%A9%E8%9B%8B%E8%AE%BE%E8%AE%A1%EF%BC%9A%E8%B4%A1%E7%8C%AE%E8%80%85/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS彩蛋设计：贡献者
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAS%E8%B7%AF%E7%BA%BF%EF%BC%9A%E5%85%B6%E4%B8%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAS路线：其一
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -844,7 +900,7 @@
 </code></pre>
 <p>后来我查询了AI得知，原来Windows操作系统的每个应用能够创建的组件句柄存在上限，当资源不足时，程序会抛出异常，并且这么做的内存也常常很高。</p>
 <p>我不知道壁纸引擎是为什么能够做到一页最高100张图片，并且流畅运动，甚至还会播放动图的，这给我一种非常匪夷所思的感觉，随后我问了<strong>ChatGPT</strong>，ChatGPT告诉我：其实壁纸引擎的实现方式是：一个窗口，其他的图片都是“画”出来的。并且壁纸引擎本身也使用了GPU加速，这使得一页存在大量的图片成为可能。</p>
-<p>后来我要求ChatGPT编写了一个图片墙，详细的代码请在我的<a href="https://github.com/xionglongztz/FurryArtStudio">GitHub</a>里查看。</p>
+<p>后来我要求ChatGPT编写了一个图片墙，详细的代码请在我的<a href="https://github.com/PawLaboratory/FurryArtStudio">GitHub</a>里查看。</p>
 <p>后来我知道，除了图片墙，还需要考虑很多东西，比如<strong>虚拟化</strong>技术，当然这里和虚拟机的虚拟化不是一个含义。</p>
 <blockquote>
 <p>虚拟化技术就是指，实际滚动的时候，只有一小部分的<code>PictureBox</code>在工作，让旧的立即释放并显示新的，这样用户看起来像是滚动，而实际上图片墙根本没动。</p>
@@ -1182,7 +1238,7 @@ End Enum
     End Sub
 #End Region
 </code></pre>
-<p>这就是我的图片墙的实现原理，完整代码请点<a href="https://github.com/xionglongztz/FurryArtStudio">这里</a>，在之后的文章里，我会介绍下关于<strong>菜单系统</strong>，<strong>主题</strong>，<strong>关于页</strong>，<strong>图片浏览器</strong>的设计。</p>
+<p>这就是我的图片墙的实现原理，完整代码请点<a href="https://github.com/PawLaboratory/FurryArtStudio">这里</a>，在之后的文章里，我会介绍下关于<strong>菜单系统</strong>，<strong>主题</strong>，<strong>关于页</strong>，<strong>图片浏览器</strong>的设计。</p>
 
 
 
