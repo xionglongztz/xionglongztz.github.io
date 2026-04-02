@@ -63,3 +63,5 @@ End Function
 目前的PawCore外观如下，隐藏了部分信息到`info`命令中：
 
 ![目前的PawCore外观](assets/PawCorePic.png)
+
+*创作于2026-1-23*
