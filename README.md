@@ -1,8 +1,11 @@
 # xionglongztz.github.io
 
-这是我的个人 GitHub Pages 站点仓库。[点击前往](https://blog.pawlabs.top/)
-
-站点使用 MkDocs 构建，用于长期记录我的学习过程、项目实践以及技术思考。
+> [!NOTE]
+> 这是我的个人 GitHub Pages 站点仓库。[点击前往](https://blog.pawlabs.top/)
+>
+> 站点使用 MkDocs 构建，用于长期记录我的学习过程、项目实践以及技术思考。
+>
+> 这个仓库主要用于内容托管与自动化部署，所有内容均为个人记录用途。
 
 ## 内容方向
 
@@ -15,11 +18,3 @@
 - Material for MkDocs
 - GitHub Actions
 - GitHub Pages
-
-## 关于协作
-
-> [!NOTE]
-> 这个仓库主要用于内容托管与自动化部署，
-> 不接受 Issue、PR 或其他协作请求。
->
-> 所有内容均为个人记录用途。
